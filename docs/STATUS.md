@@ -10,7 +10,7 @@ The founder specified a perimeter bird, a 5-inch round display, and standalone u
 
 ## Current founder document
 
-A recreated four-page invention brief (version 1.0) is available at docs/brief/BIRP-Invention-Brief-v1.0.pdf, with a reproducible generator. It has been rendered and visually reviewed. It is a new edition, not the missing original PDF. The partner pitch deck and user validation remain next steps.
+A recreated four-page invention brief (version 1.0) is available at docs/brief/BIRP-Invention-Brief-v1.0.pdf, with a reproducible generator. It has been rendered and visually reviewed. It is a new edition, not the missing original PDF. An eight-slide partner pitch is also available in docs/pitch as editable PowerPoint and PDF, with source notes and clearly labeled conceptual artwork. User validation remains a next step.
 
 ## What exists
 
@@ -24,7 +24,7 @@ No physical prototype, actual sensor integration, actuator calibration, device f
 
 ## Next builder action
 
-Build the concise partner pitch deck around the completed brief, finish the remaining founder/partner packet, and validate the proposed home-room use case. Follow FOUNDER_CHECKLIST. Resource-dependent hardware work follows that step; do not assume the founder can purchase parts now.
+Review the completed brief and partner deck, choose the initial home-room problem, and record user feedback. Finish the remaining concept diagrams and unresolved decisions before calling the entire founder packet complete. Follow FOUNDER_CHECKLIST. Resource-dependent hardware work follows that step; do not assume the founder can purchase parts now.
 
 ## Publishing
 

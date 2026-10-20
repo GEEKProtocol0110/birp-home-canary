@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.4.0 — October 20, 2026
+
+- Added an eight-slide engineering-partner pitch in editable PowerPoint and PDF.
+- Included authoring sources, speaker-note provenance and a labeled generated room concept.
+- Added pitch downloads to the project website and updated remaining founder work.
+
 ## 0.3.0 — October 20, 2026
 
 - Added the recreated four-page invention brief PDF, original visual references, precise perimeter-position diagram, and source links.

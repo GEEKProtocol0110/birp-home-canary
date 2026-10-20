@@ -11,7 +11,8 @@ The immediate path emphasizes work that can be done without buying hardware. Thi
 - [ ] Ask prospective users to explain what the bird means; record actual feedback.
 - [ ] Consolidate device, system, and app-flow concept diagrams, clearly labeled as concepts.
 - [ ] Finish an invention-description packet with dated design decisions and unresolved questions.
-- [ ] Prepare a concise partner/licensing pitch and combine the useful materials into one reviewable package.
+- [x] Prepare a concise engineering-partner pitch in PowerPoint and PDF.
+- [ ] Consolidate the full packet after the initial-use-case and diagram work.
 - [ ] Choose a partner-supported hardware experiment or another resource-appropriate next step.
 
 ## Three business questions
