@@ -8,6 +8,10 @@ Read PRODUCT_VISION, SOURCE_RECONCILIATION, DECISIONS, and control-spec-v0.2. Dr
 
 The founder specified a perimeter bird, a 5-inch round display, and standalone use without an app or subscription. The broader product retains optional services, camera/video intercom, and multi-room/master-unit goals. The sensor-only build is a proposed experiment, not the complete product.
 
+## Current founder document
+
+A recreated four-page invention brief (version 1.0) is available at docs/brief/BIRP-Invention-Brief-v1.0.pdf, with a reproducible generator. It has been rendered and visually reviewed. It is a new edition, not the missing original PDF. The partner pitch deck and user validation remain next steps.
+
 ## What exists
 
 A source-grounded product vision, draft one-page overview, minimal founder checklist, roadmap, control drafts, and a static site with simulated perimeter states plus the original logo and exploded concept artwork. Current code does not read sensors or drive a physical bird.
@@ -20,7 +24,7 @@ No physical prototype, actual sensor integration, actuator calibration, device f
 
 ## Next builder action
 
-Complete the founder/partner packet and choose one initial use case. Follow FOUNDER_CHECKLIST. Resource-dependent hardware work follows that step; do not assume the founder can purchase parts now.
+Build the concise partner pitch deck around the completed brief, finish the remaining founder/partner packet, and validate the proposed home-room use case. Follow FOUNDER_CHECKLIST. Resource-dependent hardware work follows that step; do not assume the founder can purchase parts now.
 
 ## Publishing
 

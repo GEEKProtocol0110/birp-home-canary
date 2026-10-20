@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.3.0 — October 20, 2026
+
+- Added the recreated four-page invention brief PDF, original visual references, precise perimeter-position diagram, and source links.
+- Included a reproducible PDF generator and updated founder-packet progress.
+- Added an invention-brief download to the site.
+
+
 ## 0.2.1 — October 20, 2026
 
 - Preserved the founder-supplied original logo and exploded concept image without re-encoding.

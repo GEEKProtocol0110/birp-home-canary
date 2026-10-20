@@ -6,6 +6,7 @@ The immediate path emphasizes work that can be done without buying hardware. Thi
 - [x] Publish a project site and interactive concept demonstration.
 - [x] Organize the repository, roadmap, and builder handoff.
 - [x] Draft a one-page product overview.
+- [x] Recreate and visually review the invention-brief PDF (version 1.0).
 - [ ] Choose one initial use case and define the specific problem.
 - [ ] Ask prospective users to explain what the bird means; record actual feedback.
 - [ ] Consolidate device, system, and app-flow concept diagrams, clearly labeled as concepts.

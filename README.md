@@ -12,6 +12,7 @@ BIRP is a home environmental-monitor concept that expresses room conditions thro
 
 ## Start here
 
+- [Invention brief PDF - recreated edition 1.0](docs/brief/BIRP-Invention-Brief-v1.0.pdf)
 - [Original artwork and asset register](docs/ASSET_REGISTER.md)
 - [Product vision](docs/PRODUCT_VISION.md)
 - [Original-source reconciliation](docs/SOURCE_RECONCILIATION.md)
