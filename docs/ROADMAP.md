@@ -2,12 +2,12 @@
 
 | Milestone | Status | Exit evidence |
 | --- | --- | --- |
-| 1. Define v1 scope and behavior | Draft documented | Reviewed control spec; open decisions recorded |
-| 2. Choose bench hardware | Next | Documented models, electrical limits, sensor readiness, mechanical travel |
-| 3. Implement sensing and state engine | Planned | Reproducible build; freshness, fault, and hysteresis cases pass |
-| 4. Integrate bird, halo, display | Planned | Position reference and bounded movement demonstrated |
-| 5. Complete bench-loop milestone | Planned | Measured input-to-output demonstration and recovery, recorded results |
-| 6. Prototype enclosure | Planned | Fit, airflow, noise, heat, and usability observations |
-| 7. Validate before a product launch | Planned | Defined test plan and recorded results; supported public claims |
+| 1. Recover and reconcile the source vision | Documented | Founder requests separated from assistant suggestions; current draft 0.2 |
+| 2. Complete the low-cost founder/partner packet | Next | Overview, conceptual diagrams, invention description, pitch; one initial use case chosen |
+| 3. Test audience understanding and interest | Planned | Recorded feedback; no invented demand claims |
+| 4. Choose a resource-supported bench experiment | Planned | Partner/resources, candidate hardware, electrical limits, readiness, mechanical orbit/reference |
+| 5. Implement sensing and perimeter output | Planned | Reproducible firmware; qualification/fault tests; physical orbit demonstration |
+| 6. Prototype enclosure and validate the loop | Planned | Airflow, heat, noise, clearance, usability, and recovery measurements |
+| 7. Develop broader connected-product architecture | Planned | Camera/audio, app, multi-room/master roles, optional services, and identical-unit feasibility reviewed |
 
-No dates, price, shipping commitment, certification, or validated performance is promised.
+Smoke/CO integration remains a separate requested exploration, not a feature of the bench experiment. No launch dates, pricing, certification, granted rights, or validated performance are promised.

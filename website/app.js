@@ -1,8 +1,8 @@
 const states = {
- calm: {color:'#7cac9b',lean:'0deg',title:'A little calm.',detail:'CO₂ & particles · steady',description:'Upright bird. Teal halo. The calm concept pose.'},
- attention: {color:'#d8b353',lean:'12deg',title:'A little attention.',detail:'CO₂ · attention tier',description:'A gentle lean and amber halo. The display names the measurement behind the change.'},
- high: {color:'#ce7d68',lean:'35deg',title:'A stronger signal.',detail:'Particles · high tier',description:'A deeper lean and red halo. This is a simulated high-tier pose, not an emergency alarm.'},
- unavailable: {color:'#aa93ba',lean:'0deg',title:'Waiting for a reading.',detail:'Sensor unavailable',description:'A neutral pose and violet halo. A missing reading is shown as unknown.'}
+ calm: {color:'#7cac9b',orbit:'0deg',title:'At the top.',detail:'CO₂ & particles · steady',description:'Bird at the top. Teal halo. Better conditions in this simulated example.'},
+ attention: {color:'#d8b353',orbit:'90deg',title:'Partway down.',detail:'CO₂ · attention tier',description:'Bird at the side. Amber halo. A simulated intermediate position; the display names the cause.'},
+ high: {color:'#ce7d68',orbit:'180deg',title:'At the bottom.',detail:'Particles · high tier',description:'Bird at the bottom. Red halo. A simulated high-tier position, not an emergency alarm.'},
+ unavailable: {color:'#aa93ba',orbit:null,title:'Reading unavailable.',detail:'Bird holds its last position',description:'Violet halo. The bird stays at its last position, which does not represent a current reading.'}
 };
 const device=document.querySelector('.device');
 for (const button of document.querySelectorAll('[data-mode]')) {
@@ -10,7 +10,7 @@ for (const button of document.querySelectorAll('[data-mode]')) {
   const mode=button.dataset.mode, state=states[mode];
   device.dataset.state=mode;
   device.style.setProperty('--halo',state.color);
-  device.style.setProperty('--lean',state.lean);
+  if(state.orbit!==null) device.style.setProperty('--orbit',state.orbit);
   document.getElementById('device-status').textContent=state.title;
   document.getElementById('device-detail').textContent=state.detail;
   document.getElementById('demo-description').textContent=state.description;

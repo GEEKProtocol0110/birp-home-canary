@@ -1,26 +1,28 @@
 # BIRP — The Home Canary™
 
-## v1 control specification · draft 0.1 · October 20, 2026
+## v1 control specification · draft 0.2 · October 20, 2026
 
 **Purpose:** translate measured room conditions into an understandable bird pose, halo, and display. This document turns the earlier motion concept into a proposed firmware contract. It is a specification, not tested firmware or a completed hardware design.
 
 ## Scope and provenance
 
-The recovered March 2026 direction focused v1 on CO₂, PM2.5, temperature, humidity, a moving bird, halo lighting, and a simple display. Camera, intercom, and subscriptions were excluded from that version.
+This revision follows a direct review of the founder's two shared conversations. See [source reconciliation](SOURCE_RECONCILIATION.md) and [product vision](PRODUCT_VISION.md).
 
-The earlier enclosure concept was approximately 5 inches / 127 mm across, with an ESP32-S3, round display, USB-C power, and a magnetic bird mechanism. These are design candidates; exact parts, mechanical travel, power budget, and pin assignments remain unverified.
+The founder's signature design is a **physical bird traveling around a 5-inch round display**, with top representing better conditions and bottom worse conditions. Core use must not require an app or subscription. Camera/intercom, optional services, and a multi-room/master-unit system remain in the broader vision.
 
-The original invention brief was not located during this session. Earlier motion values below were recovered from conversation context. All state logic and timing defaults added here are new proposals.
+The sensor-only CO₂/PM2.5/temperature/humidity build is a proposed first bench experiment, not an approved removal of those broader features. This control contract covers that limited experiment. ESP32-S3, USB-C, magnetic coupling, and display resolution remain candidates. Five inches describes the requested display, not a validated enclosure diameter.
+
+The earlier invention PDF and original artwork binaries remain unrecovered. The original motion examples are assistant proposals and mix body tilt with dial-position language. This draft separates those coordinates. State logic, timings, and orbital presets below are new proposals, not physical test results.
 
 ## User experience
 
-- **Calm:** bird upright; steady teal halo; actual readings visible.
-- **Attention:** bird leans; amber halo; display identifies the measurement responsible.
-- **High:** deeper lean; slow red halo pulse; display identifies the elevated measurement.
-- **Unavailable:** neutral bird pose where mechanically possible; violet halo; plain-language sensor status. Never label unknown readings “good.”
-- **Recovery:** bird returns gently after readings have remained below the applicable clearing thresholds.
+- **Calm:** bird at the top of the perimeter; teal halo; readings visible.
+- **Attention:** bird moves partway downward; amber halo; display identifies the cause.
+- **High:** bird at the lower perimeter; red halo; display identifies the cause.
+- **Unavailable:** violet halo and explicit missing-reading message; retain the last referenced position if possible, without presenting it as a current reading.
+- **Recovery:** bird returns toward the top after qualified improvement.
 
-“High” is a prototype air-quality tier, not a certified emergency alarm. This v1 scope does not include a carbon-monoxide sensor. Product copy and labeling must match that scope.
+“High” is a prototype tier, not a certified emergency alarm. This experiment does not include smoke or carbon-monoxide detection.
 
 ## Separate three kinds of state
 
@@ -86,24 +88,27 @@ STARTING applies while required sensors complete readiness. READY requires all r
 
 ## Bird motion contract
 
-Angles are conceptual bird lean relative to the upright pose, **not raw motor commands**. A magnetic track or linkage needs a calibrated mapping from pose to actuator position. Mechanical travel limits override every animation, including overshoot.
+The main coordinate is **orbital position**, measured clockwise from 12 o'clock: 0° top, 90° right, 180° bottom. These angles describe display-relative indicator position, not motor commands. Mechanism selection must establish direction, travel, homing, clearance, gravity loading, and the position-to-actuator mapping. The 90° intermediate state is a new demo preset; the founder specified only the top/bottom semantics.
 
-| Motion | Recovered concept | Proposed deterministic prototype setting |
+| Output | Proposed orbital position | Proposed movement duration |
 | --- | --- | --- |
-| Calm | 0° upright | Hold 0° |
-| Idle | 1.5–2.5° every 45–90 seconds | 2° and return; one cycle every 60 seconds |
-| Attention | +8–15°, 1,800–2,600 ms; 2° overshoot | +12° over 2,200 ms; overshoot disabled initially |
-| High | +20–40°, 1,400–1,900 ms; 3–4° overshoot | +35° over 1,700 ms; overshoot disabled initially |
-| Recovery | Return over 2,200–3,200 ms after 3–10 seconds of safe conditions | Return over 2,700 ms after qualified aggregate CALM remains stable another 5 seconds |
-| Curiosity | ±4–8°, approach 700–1,100 ms; hold 600–900 ms; return 900–1,300 ms; cooldown 90–180 seconds | Deferred until core motion is proven |
+| CALM | 0° / top | Hold after recovery |
+| ATTENTION | 90° / right | 2,200 ms from current position |
+| HIGH | 180° / bottom | 1,700 ms from current position |
+| Recovery to CALM | 0° / top | 2,700 ms, after aggregate CALM qualifies and remains stable another 5 seconds |
+| UNAVAILABLE | Retain last referenced position; do not home automatically | Cancel decorative motion; stop safely under the chosen mechanism's fault policy |
 
-Idle cycle duration is newly proposed as 1 second outward and 1 second back. Idle runs only in READY + CALM, after recovery ends. The first idle cycle is due 60 seconds after entering that combination; a concern, fault, or restart resets that deadline. The earlier stronger-motion sketch included an optional reverse movement; defer it along with overshoot until physical clearance is verified.
+These durations are conceptual; do not attempt them on hardware before measuring required speed, torque, limits, and clearance. Use easing without overshoot for the first bench build. Known HIGH/ATTENTION still takes priority over a different unavailable channel, as defined in aggregation.
 
-Move once on a state change, then hold the resulting pose. Do not repeatedly replay the lean while a state remains elevated. Higher concern preempts idle and recovery immediately. Replan every transition from the current commanded position; never jump to the start of an old animation. HALO and display update immediately even while the bird is moving.
+At power-up, actual position is unknown. Disable movement until a mechanism-appropriate reference procedure succeeds. During a motion fault, do not repeatedly attempt homing. Continue independent sensor, halo, and display processing. A held bird position during a sensor fault must be identified as a previous position, never a current all-clear signal.
 
-Any unavailable output cancels decorative motion and returns to neutral only if the actuator is calibrated and operational. At power-up, do not assume position. Disable motion until a mechanically appropriate position-reference procedure succeeds. A motion fault must leave measurement, halo, and display processing operational; it must not trigger repeated automatic homing.
+### Historical body-motion proposals
 
-All animation is nonblocking and evaluated from elapsed monotonic time. The 5-second recovery delay is an animation choice after clearing qualification; it does not replace the measurement clear_hold_ms interval or imply that a room has been certified safe.
+The original assistant suggested calm micro-tilts of 1.5–2.5°, warning tilts of 8–15°, stronger tilts of 20–40°, and a curiosity gesture of 4–8°. It also proposed overshoot, chirps, and night-mode variations. These were not calibrated orbital coordinates. Body tilt, curiosity sensing, sound, and idle animation are deferred; they require separate design and must not obscure the main perimeter indicator.
+
+Move once per qualified output transition, then hold. Higher concern preempts recovery immediately. Replan from the current commanded position. Update halo and cause text immediately. Every animation must be nonblocking and bounded by validated mechanical travel.
+
+The browser demonstration switches among illustrative targets; it does not implement sensor qualification, a motor driver, or the full recovery timer. Missing-reading mode holds its last illustrated location and explicitly labels that location as historical.
 
 ## Control-loop pseudocode
 
@@ -158,6 +163,6 @@ These are planned verification cases; no firmware or physical test has run.
 
 ## Next build milestone
 
-Prove one complete bench loop: **sensor readings → channel states → visible cause → bounded bird motion → qualified recovery**.
+Prove one complete bench loop: **sensor readings → channel states → visible cause → bounded perimeter bird motion → qualified recovery**.
 
 Before claiming this milestone, select and document the sensor models and motion mechanism, establish electrical and mechanical limits, populate and review the classification policy, implement the loop, and execute the acceptance scenarios. Keep hardware receipts, firmware version, configuration version, and measured results together so another builder can reproduce the demonstration.

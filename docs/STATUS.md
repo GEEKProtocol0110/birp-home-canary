@@ -1,30 +1,31 @@
 # Project handoff
 
-Updated: October 20, 2026.
+Updated October 20, 2026 after direct review of the two original shared conversations.
+
+## Current source of truth
+
+Read PRODUCT_VISION, SOURCE_RECONCILIATION, DECISIONS, and control-spec-v0.2. Draft 0.1 remains for traceability but is superseded where geometry/scope differ.
+
+The founder specified a perimeter bird, a 5-inch round display, and standalone use without an app or subscription. The broader product retains optional services, camera/video intercom, and multi-room/master-unit goals. The sensor-only build is a proposed experiment, not the complete product.
 
 ## What exists
 
-- Recovered focused v1 scope and earlier motion concept.
-- Control specification draft 0.1 with proposed state logic, fault handling, hysteresis, and acceptance scenarios.
-- Static website with four illustrative bird states.
-- Repository structure and implementation roadmap.
+A source-grounded product vision, draft one-page overview, minimal founder checklist, roadmap, control drafts, and a static site with simulated perimeter states. Current code does not read sensors or drive a physical bird.
 
-## What has not been demonstrated
+## What remains unavailable or unproven
 
-No physical prototype, sensor integration, calibrated actuator, firmware implementation, PCB, CAD, or hardware test result is included. Thresholds are unassigned. Do not represent this package as a working air monitor.
+Original PDF/image binaries were not recovered through the shared pages. The conversations reference BIRP_Invention_Brief.pdf and generated illustrations, but those references are not recovered artifacts. Earlier Library metadata identified five BIRP images; their contents remain unverified here.
 
-## Source recovery
-
-The earlier `BIRP_Invention_Brief.pdf` was not located. Five older BIRP-named concept JPEGs were located by metadata but could not be materialized in this session; they are not included. Earlier motion details were recovered from prior conversation context and are labeled accordingly in the control specification.
+No physical prototype, actual sensor integration, actuator calibration, device firmware, PCB, buildable CAD, camera/intercom implementation, customer validation, manufacturing quote, or test evidence is included. Thresholds remain unassigned.
 
 ## Next builder action
 
-Choose candidate sensor models and a mechanism, collect manufacturer documentation, and record readiness requirements, current draw, logic levels, dimensions, motion travel, and position-reference behavior. Then implement and bench-test the control loop. Record physical evidence before marking the milestone complete.
+Complete the founder/partner packet and choose one initial use case. Follow FOUNDER_CHECKLIST. Resource-dependent hardware work follows that step; do not assume the founder can purchase parts now.
 
 ## Publishing
 
 Canonical repository: https://github.com/GEEKProtocol0110/birp-home-canary
 
-Public project site: https://birp-home-canary.oolongee.chatgpt.site
+Public concept site: https://birp-home-canary.oolongee.chatgpt.site
 
-The repository holds the documentation and website source. The hosted site is published separately through Sites. A GitHub push does not automatically deploy the hosted site. When changing the website, synchronize `website/` with the hosted Site and verify publication.
+Website source lives in website/. The hosted site is published separately through Sites. GitHub pushes do not automatically deploy it. Update both source and publication when changing the site.
