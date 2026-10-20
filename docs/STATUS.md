@@ -10,11 +10,11 @@ The founder specified a perimeter bird, a 5-inch round display, and standalone u
 
 ## What exists
 
-A source-grounded product vision, draft one-page overview, minimal founder checklist, roadmap, control drafts, and a static site with simulated perimeter states. Current code does not read sensors or drive a physical bird.
+A source-grounded product vision, draft one-page overview, minimal founder checklist, roadmap, control drafts, and a static site with simulated perimeter states plus the original logo and exploded concept artwork. Current code does not read sensors or drive a physical bird.
 
 ## What remains unavailable or unproven
 
-Original PDF/image binaries were not recovered through the shared pages. The conversations reference BIRP_Invention_Brief.pdf and generated illustrations, but those references are not recovered artifacts. Earlier Library metadata identified five BIRP images; their contents remain unverified here.
+Two original visual assets have since been supplied and preserved; see ASSET_REGISTER. The original invention PDF was not recovered through the shared pages. The conversations reference BIRP_Invention_Brief.pdf and generated illustrations, but the PDF reference is not a recovered artifact. The two supplied images are now available; other earlier image variants have not been matched or recovered.
 
 No physical prototype, actual sensor integration, actuator calibration, device firmware, PCB, buildable CAD, camera/intercom implementation, customer validation, manufacturing quote, or test evidence is included. Thresholds remain unassigned.
 

@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.2.1 — October 20, 2026
+
+- Preserved the founder-supplied original logo and exploded concept image without re-encoding.
+- Added an asset register and updated recovered-art status.
+- Added original branding and an illustrated concept section to the site.
+
+
 ## 0.2.0 — October 20, 2026
 
 - Reviewed the two original shared conversations and separated founder requirements from assistant proposals.

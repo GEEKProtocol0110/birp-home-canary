@@ -6,13 +6,13 @@
 
 ## Scope and provenance
 
-This revision follows a direct review of the founder's two shared conversations. See [source reconciliation](SOURCE_RECONCILIATION.md) and [product vision](PRODUCT_VISION.md).
+This revision follows a direct review of the founder's two shared conversations. See [source reconciliation](https://github.com/GEEKProtocol0110/birp-home-canary/blob/main/docs/SOURCE_RECONCILIATION.md) and [product vision](https://github.com/GEEKProtocol0110/birp-home-canary/blob/main/docs/PRODUCT_VISION.md).
 
 The founder's signature design is a **physical bird traveling around a 5-inch round display**, with top representing better conditions and bottom worse conditions. Core use must not require an app or subscription. Camera/intercom, optional services, and a multi-room/master-unit system remain in the broader vision.
 
 The sensor-only CO₂/PM2.5/temperature/humidity build is a proposed first bench experiment, not an approved removal of those broader features. This control contract covers that limited experiment. ESP32-S3, USB-C, magnetic coupling, and display resolution remain candidates. Five inches describes the requested display, not a validated enclosure diameter.
 
-The earlier invention PDF and original artwork binaries remain unrecovered. The original motion examples are assistant proposals and mix body tilt with dial-position language. This draft separates those coordinates. State logic, timings, and orbital presets below are new proposals, not physical test results.
+The earlier invention PDF remains unrecovered. Two original reference images were subsequently supplied; see the asset register. Those illustrations are conceptual, not mechanical validation. The original motion examples are assistant proposals and mix body tilt with dial-position language. This draft separates those coordinates. State logic, timings, and orbital presets below are new proposals, not physical test results.
 
 ## User experience
 

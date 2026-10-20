@@ -1,5 +1,7 @@
 # BIRP — The Home Canary™
 
+<p align="center"><img src="website/assets/birp-original-logo.jpg" width="180" alt="Original BIRP logo: white bird over a yellow halo"></p>
+
 **A little bird. A clearer picture.**
 
 [Visit the BIRP website](https://birp-home-canary.oolongee.chatgpt.site) · [Read the control specification](docs/control-spec-v0.2.md) · [See the roadmap](docs/ROADMAP.md)
@@ -10,6 +12,7 @@ BIRP is a home environmental-monitor concept that expresses room conditions thro
 
 ## Start here
 
+- [Original artwork and asset register](docs/ASSET_REGISTER.md)
 - [Product vision](docs/PRODUCT_VISION.md)
 - [Original-source reconciliation](docs/SOURCE_RECONCILIATION.md)
 - [Minimal founder checklist](docs/FOUNDER_CHECKLIST.md)
@@ -36,6 +39,12 @@ python3 -m http.server 8080 --directory website
 ```
 
 Open http://localhost:8080. The four state buttons simulate perimeter bird positions and halo colors; they do not read sensors or implement the firmware state engine.
+
+## Original device concept
+
+![BIRP exploded device concept](website/assets/birp-exploded-concept.jpg)
+
+Concept illustration only. Component labels, fit, and dimensions are not validated engineering specifications. See the asset register for provenance and limits.
 
 ## Repository map
 

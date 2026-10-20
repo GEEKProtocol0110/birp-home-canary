@@ -12,7 +12,7 @@ The founder's signature design is a **physical bird traveling around a 5-inch ro
 
 The sensor-only CO₂/PM2.5/temperature/humidity build is a proposed first bench experiment, not an approved removal of those broader features. This control contract covers that limited experiment. ESP32-S3, USB-C, magnetic coupling, and display resolution remain candidates. Five inches describes the requested display, not a validated enclosure diameter.
 
-The earlier invention PDF and original artwork binaries remain unrecovered. The original motion examples are assistant proposals and mix body tilt with dial-position language. This draft separates those coordinates. State logic, timings, and orbital presets below are new proposals, not physical test results.
+The earlier invention PDF remains unrecovered. Two original reference images were subsequently supplied; see the asset register. Those illustrations are conceptual, not mechanical validation. The original motion examples are assistant proposals and mix body tilt with dial-position language. This draft separates those coordinates. State logic, timings, and orbital presets below are new proposals, not physical test results.
 
 ## User experience
 

@@ -5,7 +5,7 @@ Reviewed October 20, 2026, using the shared conversations supplied by the founde
 1. [House Burping Device Explained](https://chatgpt.com/share/6ad73285-01e0-83ea-b09e-83f61921a494?ogimg=plain) — product origin, user-authored requirements, design exploration, business-model discussion, and proposed motion specification.
 2. [BIRP Development Minimal Plan](https://chatgpt.com/share/6ad73293-6efc-83e9-b179-55be44093599?ogimg=plain) — a minimal founder checklist and a plan emphasizing a presentable invention/partner package before paid development.
 
-The conversation text was retrieved successfully. Original image and PDF binaries were not recovered through these pages. Reading the conversations does not establish that the referenced deliverables still exist or that any proposed engineering has been validated.
+The conversation text was retrieved successfully. Original image and PDF binaries were not recovered through these pages. Two image files were subsequently supplied directly and are recorded in ASSET_REGISTER; the original PDF is still unavailable. Reading the conversations does not establish that the referenced deliverables still exist or that any proposed engineering has been validated.
 
 ## Corrections to the initial repository
 

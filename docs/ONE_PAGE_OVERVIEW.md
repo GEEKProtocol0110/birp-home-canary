@@ -20,7 +20,7 @@ A small bench demonstration of sensor readings, cause-aware display, halo, physi
 
 ## Current evidence
 
-A public concept site, an interactive browser demonstration, original-source reconciliation, and control-specification drafts. There is no working physical prototype or validated device performance in this package.
+A public concept site, an interactive browser demonstration, two original visual references, source reconciliation, and control-specification drafts. There is no working physical prototype or validated device performance in this package.
 
 ## Collaboration goal
 
